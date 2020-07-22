@@ -7,47 +7,54 @@
 //
 
 import UIKit
-
 class ListExerciseViewController: UIViewController {
-    let exercisesList = ["Deportes", "Tecnología", "Educación", "España"]
+    var exercisesList = ["Deportes", "Tecnología", "Educación", "España"]
     var typeStr = "Tecnología"
+    var news = [NewsFile]()
+    func noticia(){
+        let url = Bundle.main.url(forResource: "News", withExtension: "json")
+        print(url!)
+       let data = NSData(contentsOf: url!)
+        do{
+            if let object = try JSONSerialization.jsonObject(with: data! as Data, options: []) as? [String: Any] {
+            // try to read out a string array
+                var newsfile = NewsFile()
+                print(object["Antetitular"]!)
+                print(object["fecha"]!)
+                print(object["Titular"]!)
+                print(object["Subtitulo"]!)
+                print(object["Text"]!)
+                newsfile.Antetilular = object["Antetitular"] as! String
+                newsfile.fecha = object["fecha"] as! String
+                newsfile.Titular = object["Titular"] as! String
+                newsfile.Subtitulo = object["Subtitulo"] as! String
+                newsfile.Texto = object["Text"] as! String
+                news.append(newsfile)
+            }
+        }
+        catch{
+                print("error")
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         noticia()
     }
-    func noticia(){
-        let url = Bundle.main.url(forResource: "News", withExtension: "json")
-        print(url)
-       let data = NSData(contentsOf: url!)
-    do{
-       let object = try JSONSerialization.jsonObject(with: data! as Data, options: .allowFragments)
-            print("Enter json")
-             print(data)
-             print(object)
-        if let dictionary = object as? [String: AnyObject] {
-            print(dictionary)
-        }
-    }
-            catch{
-                print(data)
-                print("error")
-            }
-    }
-    }
+}
 extension ListExerciseViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercisesList.count
+        return news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
               let cell =
                 tableView.dequeueReusableCell(withIdentifier: "SecondCustomCell", for: indexPath) as! SecondCustomTableViewCell
         
-              cell.Antetitular.text = exercisesList[indexPath.row]
-        
-             // cell.Titular.text = [indexPath.row]
-        
-              cell.ImageCell.image = UIImage(named: exercisesList[indexPath.row])
+                cell.Antetitular.text = news[indexPath.row].Antetilular
+                cell.Titular.text = news[indexPath.row].Titular
+                cell.Tiempo.text = news[indexPath.row].Tiempo
+                cell.ImageCell.image = UIImage(named: exercisesList[indexPath.row])
         
               return cell
            

@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
            super.viewDidLoad()
-        noticia()
+        //noticia()
     }
-func noticia(){
-let url = Bundle.main.url(forResource: "News", withExtension: "json")
-    print(url)
-    let data = NSData(contentsOf: url!)}
+//func noticia(){
+//let url = Bundle.main.url(forResource: "News", withExtension: "json")
+  //  print(url!)
+   // let data = NSData(contentsOf: url!)}
 }
 

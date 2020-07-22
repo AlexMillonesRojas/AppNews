@@ -10,6 +10,7 @@ import Foundation
 
 class NewsFile {
  var Antetilular = ""
+ var Tiempo = "hace 1 hora"
  var imagen = ""
  var fecha = "../../...."
  var Titular = ""
