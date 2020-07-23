@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     override func viewDidLoad() {
            super.viewDidLoad()
         //noticia()
@@ -21,3 +20,10 @@ class ViewController: UIViewController {
    // let data = NSData(contentsOf: url!)}
 }
 
+/*"Antetitular":"Tecnología",
+"Imagen":"Tecnología",
+"Tiempo":"hace 2 hora",
+"fecha":"22/07/2020",
+"Titular":"Apple",
+"Subtitulo":"Novedades",
+"Text":"Poco Texto"*/

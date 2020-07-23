@@ -20,6 +20,8 @@
 		4098DC3924C08D8E000F56C9 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098DC3824C08D8E000F56C9 /* ExerciseTableViewCell.swift */; };
 		4098DC3B24C09283000F56C9 /* ListExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098DC3A24C09283000F56C9 /* ListExerciseViewController.swift */; };
 		4098DC3D24C0AD3E000F56C9 /* NewsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098DC3C24C0AD3E000F56C9 /* NewsFile.swift */; };
+		40F57AF024C9D61F008950AC /* FullNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F57AEF24C9D61F008950AC /* FullNewsViewController.swift */; };
+		40F57AF224C9DDD6008950AC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F57AF124C9DDD6008950AC /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		4098DC3824C08D8E000F56C9 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		4098DC3A24C09283000F56C9 /* ListExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExerciseViewController.swift; sourceTree = "<group>"; };
 		4098DC3C24C0AD3E000F56C9 /* NewsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFile.swift; sourceTree = "<group>"; };
+		40F57AEF24C9D61F008950AC /* FullNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNewsViewController.swift; sourceTree = "<group>"; };
+		40F57AF124C9DDD6008950AC /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			children = (
 				405525D624C5DFF0002AC1E9 /* FirstCustomTableViewCell.swift */,
 				405525D824C5E31A002AC1E9 /* SecondCustomTableViewCell.swift */,
+				4098DC3824C08D8E000F56C9 /* ExerciseTableViewCell.swift */,
 			);
 			name = "Custom TableView Cells";
 			sourceTree = "<group>";
@@ -127,8 +132,8 @@
 		4098DC3224C084DF000F56C9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				405525D524C5DF5F002AC1E9 /* Custom TableView Cells */,
-				4098DC3724C08D63000F56C9 /* ExerciseTableViewCell */,
+				40F57AEE24C9D521008950AC /* FullNews */,
+				4098DC3724C08D63000F56C9 /* Exercise */,
 				4098DC3424C08592000F56C9 /* Main */,
 				4098DC2024C07C9B000F56C9 /* Main.storyboard */,
 				4098DC2524C07C9F000F56C9 /* LaunchScreen.storyboard */,
@@ -147,17 +152,26 @@
 		4098DC3624C0862C000F56C9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				40F57AF124C9DDD6008950AC /* Common.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
 		};
-		4098DC3724C08D63000F56C9 /* ExerciseTableViewCell */ = {
+		4098DC3724C08D63000F56C9 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
-				4098DC3824C08D8E000F56C9 /* ExerciseTableViewCell.swift */,
+				405525D524C5DF5F002AC1E9 /* Custom TableView Cells */,
 				4098DC3A24C09283000F56C9 /* ListExerciseViewController.swift */,
 			);
-			name = ExerciseTableViewCell;
+			name = Exercise;
+			sourceTree = "<group>";
+		};
+		40F57AEE24C9D521008950AC /* FullNews */ = {
+			isa = PBXGroup;
+			children = (
+				40F57AEF24C9D61F008950AC /* FullNewsViewController.swift */,
+			);
+			name = FullNews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +250,10 @@
 				404F75C424C21CD800F8411A /* round.swift in Sources */,
 				4098DC3924C08D8E000F56C9 /* ExerciseTableViewCell.swift in Sources */,
 				4098DC3D24C0AD3E000F56C9 /* NewsFile.swift in Sources */,
+				40F57AF224C9DDD6008950AC /* Common.swift in Sources */,
 				4098DC1B24C07C9B000F56C9 /* AppDelegate.swift in Sources */,
 				405525D724C5DFF0002AC1E9 /* FirstCustomTableViewCell.swift in Sources */,
+				40F57AF024C9D61F008950AC /* FullNewsViewController.swift in Sources */,
 				4098DC1D24C07C9B000F56C9 /* SceneDelegate.swift in Sources */,
 				405525D924C5E31A002AC1E9 /* SecondCustomTableViewCell.swift in Sources */,
 				4098DC3B24C09283000F56C9 /* ListExerciseViewController.swift in Sources */,

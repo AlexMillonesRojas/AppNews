@@ -7,16 +7,20 @@
 //
 
 import Foundation
-
+import UIKit
 class NewsFile {
  var Antetilular = ""
  var Tiempo = "hace 1 hora"
- var imagen = ""
- var fecha = "../../...."
+ var Imagen = UIImage() //= UIImage(named: "Tecnología")!
+ var Fecha = "../../...."
  var Titular = ""
  var Subtitulo = ""
  var Texto = ""
  var rawtext = Rawtext()
+    
+    func selectImage(_ name:String) {
+        Imagen = UIImage(named: name)!
+    }
 }
 
 class Rawtext {

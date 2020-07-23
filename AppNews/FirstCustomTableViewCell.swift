@@ -13,19 +13,10 @@ class FirstCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var Antetitular: UILabel!
     @IBOutlet weak var Titular: UILabel!
     @IBOutlet weak var Tiempo: UILabel!
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
-
 }

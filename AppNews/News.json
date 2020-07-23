@@ -1,11 +1,11 @@
 {
     "Antetitular":"Deportes",
-    "Imagen":"Tecnología",
+    "Imagen":"Deportes",
     "Tiempo":"hace 1 hora",
-    "fecha":"21/07/2020",
+    "Fecha":"21/07/2020",
     "Titular":"Vardrid",
     "Subtitulo":"Indignacion del Leganes",
-    "Text":"Mucho Texto",
+    "Texto":"Mucho Texto",
     "RawText":[
         {
         "Text":"...",
@@ -19,3 +19,4 @@
         }
      ]
 }
+    

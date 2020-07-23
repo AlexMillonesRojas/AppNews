@@ -18,17 +18,18 @@ class ListExerciseViewController: UIViewController {
         do{
             if let object = try JSONSerialization.jsonObject(with: data! as Data, options: []) as? [String: Any] {
             // try to read out a string array
-                var newsfile = NewsFile()
+                let newsfile = NewsFile()
                 print(object["Antetitular"]!)
-                print(object["fecha"]!)
+                print(object["Fecha"]!)
                 print(object["Titular"]!)
                 print(object["Subtitulo"]!)
-                print(object["Text"]!)
+                print(object["Texto"]!)
                 newsfile.Antetilular = object["Antetitular"] as! String
-                newsfile.fecha = object["fecha"] as! String
+                newsfile.Fecha = object["Fecha"] as! String
                 newsfile.Titular = object["Titular"] as! String
                 newsfile.Subtitulo = object["Subtitulo"] as! String
-                newsfile.Texto = object["Text"] as! String
+                newsfile.Texto = object["Texto"] as! String
+                newsfile.selectImage(object["Imagen"] as! String)
                 news.append(newsfile)
             }
         }
@@ -49,15 +50,14 @@ extension ListExerciseViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
               let cell =
-                tableView.dequeueReusableCell(withIdentifier: "SecondCustomCell", for: indexPath) as! SecondCustomTableViewCell
-        
+                tableView.dequeueReusableCell(withIdentifier: "SecondCustomCell", for: indexPath) as! SecondCustomTableViewCell        
                 cell.Antetitular.text = news[indexPath.row].Antetilular
                 cell.Titular.text = news[indexPath.row].Titular
                 cell.Tiempo.text = news[indexPath.row].Tiempo
-                cell.ImageCell.image = UIImage(named: exercisesList[indexPath.row])
-        
+                cell.ImageCell.image = news[indexPath.row].Imagen
               return cell
            
     }
-
+    
+    
 }

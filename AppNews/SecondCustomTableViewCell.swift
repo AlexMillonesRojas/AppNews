@@ -9,24 +9,16 @@
 import UIKit
 
 class SecondCustomTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var ImageCell: UIImageView!
     @IBOutlet weak var Antetitular: UILabel!
     @IBOutlet weak var Titular: UITextView!
     @IBOutlet weak var Tiempo: UILabel!
-    //
-
-    
-    
-    
-    
+    @IBOutlet weak var button: UIButton!
+    var news = NewsFile()
     override func awakeFromNib() {
         super.awakeFromNib()
-            }
-
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-
 }
