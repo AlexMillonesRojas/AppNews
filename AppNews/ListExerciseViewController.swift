@@ -19,11 +19,6 @@ class ListExerciseViewController: UIViewController {
             if let object = try JSONSerialization.jsonObject(with: data! as Data, options: []) as? [String: Any] {
             // try to read out a string array
                 let newsfile = NewsFile()
-                print(object["Antetitular"]!)
-                print(object["Fecha"]!)
-                print(object["Titular"]!)
-                print(object["Subtitulo"]!)
-                print(object["Texto"]!)
                 newsfile.Antetilular = object["Antetitular"] as! String
                 newsfile.Fecha = object["Fecha"] as! String
                 newsfile.Titular = object["Titular"] as! String
@@ -54,7 +49,8 @@ extension ListExerciseViewController: UITableViewDelegate, UITableViewDataSource
                 cell.Antetitular.text = news[indexPath.row].Antetilular
                 cell.Titular.text = news[indexPath.row].Titular
                 cell.Tiempo.text = news[indexPath.row].Tiempo
-                cell.ImageCell.image = news[indexPath.row].Imagen
+        cell.ImageCell.image = news[indexPath.row].Imagen
+        cell.news = news[indexPath.row]
               return cell
            
     }

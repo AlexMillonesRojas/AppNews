@@ -15,6 +15,14 @@ class SecondCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var Tiempo: UILabel!
     @IBOutlet weak var button: UIButton!
     var news = NewsFile()
+    @IBAction func ActionButton(_ sender:Any) {
+        print (news.Antetilular)
+        let mainStoryBorad = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let mainNavigationVC = mainStoryBorad.instantiateViewController(identifier: "FullNews") as? FullNewsViewController else{
+            return
+        }
+        mainNavigationVC.present(mainNavigationVC, animated: true, completion: nil)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
