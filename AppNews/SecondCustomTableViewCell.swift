@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SecondCustomTableViewCellDelegate: class {
+    func SecondCustomTableViewCell (_ viewController: SecondCustomTableViewCell, _ news: NewsFile)
+}
+
 class SecondCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var ImageCell: UIImageView!
     @IBOutlet weak var Antetitular: UILabel!
@@ -15,14 +19,11 @@ class SecondCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var Tiempo: UILabel!
     @IBOutlet weak var button: UIButton!
     var news = NewsFile()
+    weak var delegate: SecondCustomTableViewCellDelegate?
     @IBAction func ActionButton(_ sender:Any) {
-        print (news.Antetilular)
-        let mainStoryBorad = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let mainNavigationVC = mainStoryBorad.instantiateViewController(identifier: "FullNews") as? FullNewsViewController else{
-            return
-        }
-        mainNavigationVC.present(mainNavigationVC, animated: true, completion: nil)
+        self.delegate?.SecondCustomTableViewCell(self, news)
     }
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

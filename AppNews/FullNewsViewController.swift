@@ -17,12 +17,14 @@ class FullNewsViewController: UIViewController {
     @IBOutlet weak var subtitulo: UILabel!
     @IBOutlet weak var texto: UITextView!
     var news = NewsFile()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NewsFile()
+            antetitular.text = news.Antetilular
+            subtitulo.text = news.Subtitulo
+            texto.text = news.Texto
+            fecha.text = news.Fecha
+            titular.text = news.Titular
+            deportes.image = news.Imagen
     }
     
 }

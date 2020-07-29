@@ -11,13 +11,13 @@ class ListExerciseViewController: UIViewController {
     var exercisesList = ["Deportes", "Tecnología", "Educación", "España"]
     var typeStr = "Tecnología"
     var news = [NewsFile]()
+    var selectedNews = NewsFile()
     func noticia(){
         let url = Bundle.main.url(forResource: "News", withExtension: "json")
         print(url!)
        let data = NSData(contentsOf: url!)
         do{
             if let object = try JSONSerialization.jsonObject(with: data! as Data, options: []) as? [String: Any] {
-            // try to read out a string array
                 let newsfile = NewsFile()
                 newsfile.Antetilular = object["Antetitular"] as! String
                 newsfile.Fecha = object["Fecha"] as! String
@@ -32,7 +32,13 @@ class ListExerciseViewController: UIViewController {
                 print("error")
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender : Any?){
+        let vc = segue.destination as? FullNewsViewController
+            vc?.news = selectedNews
+    }
+    func  secondScene() {
+        performSegue(withIdentifier: "CompleteNews", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         noticia()
@@ -49,11 +55,21 @@ extension ListExerciseViewController: UITableViewDelegate, UITableViewDataSource
                 cell.Antetitular.text = news[indexPath.row].Antetilular
                 cell.Titular.text = news[indexPath.row].Titular
                 cell.Tiempo.text = news[indexPath.row].Tiempo
-        cell.ImageCell.image = news[indexPath.row].Imagen
-        cell.news = news[indexPath.row]
+                cell.ImageCell.image = news[indexPath.row].Imagen
+                cell.news = news[indexPath.row]
+                cell.delegate = self
               return cell
            
+    }
+
+}
+extension ListExerciseViewController: SecondCustomTableViewCellDelegate{
+    func SecondCustomTableViewCell(_ viewController: SecondCustomTableViewCell, _ news: NewsFile)
+        {
+            selectedNews = news
+            secondScene()
     }
     
     
 }
+

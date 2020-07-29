@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class NewsFile {
  var Antetilular = ""
- var Tiempo = "hace 1 hora"
+ var Tiempo = ""
  var Imagen = UIImage() //= UIImage(named: "Tecnología")!
  var Fecha = "../../...."
  var Titular = ""
