@@ -1,4 +1,4 @@
-[
+{"news":[
   {
     "Antetitular":"Deportes",
     "Imagen":"Arthur",
@@ -7,7 +7,7 @@
     "Titular":"Arthur-Barça: posturas irreconciliables",
     "Subtitulo":"El jugador siente que le han maltratado y el club no entiende su falta de motivación",
     "Texto":"Como suele pasar en cualquier separación, la dos partes creen tener razón y poseer la verdad absoluta del cese de la relación. Y eso es lo que pasa en el divorcio profesional entre Arthur y el Barcelona. El jugador se cree cargado de razones para haberse declarado en rebeldía e irse a Brasil y no presentarse a los entrenamientos y en el Camp Nou no entienden la espantada del brasileño, que sabía a lo que se atenía cuando firmó con la Juventus hace menos de un mes. El futbolista quiere rescindir el mes de contrato que le queda y el Barça ya estudia las medidas legales para sancionarle. A estas horas, la solución no parece amigable."
-},
+  },
   {
     "Antetitular":"Tecnología",
     "Imagen":"Tecnología",
@@ -16,7 +16,7 @@
     "Titular":"Apple News aterriza en Canadá, ¿cuándo llegará a España?",
     "Subtitulo":"El motivo por el que Apple News no ha llegado a España",
     "Texto":"Apple News es una aplicación que llegó a Estados Unidos con iOS 9 y que muestra a los usuarios las noticias más destacables del día. No es que Apple posea un grupo editorial que redacte las noticias sino que su app se maneja a través un feed que recopila artículos de conocidos medios de comunicación como el prestigioso The New York Times."
-},
+  },
   {
     "Antetitular":"Economia",
     "Imagen":"",
@@ -52,7 +52,7 @@
     "Titular":"",
     "Subtitulo":"",
     "Texto":""
-},
+  },
   {
     "Antetitular":"Covid-19",
     "Imagen":"",
@@ -90,3 +90,4 @@
    "Texto":""
   }
 ]
+}

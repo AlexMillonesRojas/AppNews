@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class FullNewsViewController: UIViewController {
     @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var antetitular: UILabel!
